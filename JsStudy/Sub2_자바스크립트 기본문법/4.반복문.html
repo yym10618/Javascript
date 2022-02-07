@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>4.반복문</title>
+    <!--
+        날짜 : 2022/02/07
+        이름 : 양용민
+        내용 : 자바스크립트 반복문 실습하기 교재 p60
+    -->
+</head>
+<body>
+    <h4>4.반복문</h4>
+    <script>
+        // for
+        for(let i=1 ; i<=3 ; i++){
+            document.write('i : '+i+'<br/>');
+        }
+
+        // 1부터 10까지 합
+        let sum = 0;
+
+        for(let k=1 ; k<=10 ; k++){
+            sum += k;
+        }
+
+        document.write('1부터 10까지 합 : '+sum+'<br/>');
+        
+        // 1부터 10까지 짝수 합
+        let eSum = 0;
+
+        for(let j=1 ; j<=10 ; j++){
+            if(j % 2 == 0){
+                eSum += j;
+            }
+        }
+
+        document.write('1부터 10까지 짝수 합 : '+eSum+'<br/>');
+        
+        // 별삼각형
+        for(let a=1 ; a<=10 ; a++){
+            for(let b=1 ; b<a ; b++){
+                document.write('☆');
+            }
+            document.write('<br/>');
+        }
+    </script>
+
+        <h4>while문</h4>
+    <script>
+        // while
+        let tot = 0;
+        let t = 1;
+
+        while(t <= 10){
+            tot += t;
+            t++;
+        }
+
+        document.write('while 1부터 10까지의 합 : '+tot+'<br/>');
+        
+        // 5와 7의 최소공배수
+        let num = 1;
+
+        while(true){
+            if(num % 5 == 0 && num % 7 == 0){
+                break;
+            }
+            num++;
+        }
+        document.write('while 5와 7의 최소공배수 : '+num+'<br/>');
+    </script>
+
+    <h4>구구단표</h4>
+    
+        // 구구단표
+        <table border='1'>
+            <tr>
+                <th>2단</th>    
+                <th>3단</th>    
+                <th>4단</th>    
+                <th>5단</th>    
+                <th>6단</th>    
+                <th>7단</th>    
+                <th>8단</th>    
+                <th>9단</th>    
+            </tr>
+            <script>
+            for(let a=1 ; a<=9 ; a++){
+                document.write("<tr>");
+                for(let b=2 ; b<=9 ; b++){
+                    document.write("<td>"+b+'x'+a+'='+a*b+"</td>");
+                }
+                document.write("</tr>");
+            }
+            </script>
+        </table>
+    
+</body>
+</html>
